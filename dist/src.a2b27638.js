@@ -169,17 +169,40 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 /**
  * テンプレート文字列
  */
-var name = "narin";
-var age = 25;
-// 「私の名前はnarinです。年齢は25歳です。」
+// const name = "narin";
+// const age = 25;
+// // 「私の名前はnarinです。年齢は25歳です。」
 
-// 従来の方法
-var message1 = "私の名前は" + name + "です。年齢は" + age + "です。";
-console.log(message1);
+// // 従来の方法
+// const message1 = "私の名前は" + name + "です。年齢は" + age + "です。";
+// console.log(message1);
 
-// テンプレート文字列を用いた方法
-var message2 = "\u79C1\u306E\u540D\u524D\u306F".concat(name, "\u3067\u3059\u3002\u5E74\u9F62\u306F").concat(age, "\u3067\u3059\u3002");
-console.log(message2);
+// // テンプレート文字列を用いた方法
+// const message2 = `私の名前は${name}です。年齢は${age}です。`;
+// console.log(message2);
+
+/**
+ * アロー関数
+ */
+// 従来の関数
+// function func1(str) {
+//   return str;
+// }
+// func1というconst変数に関数を入れることもできる
+var func1 = function func1(str) {
+  return str;
+};
+console.log(func1("func1です"));
+
+// アロー関数
+var func2 = function func2(str) {
+  return str;
+};
+console.log(func2("func2です"));
+var func3 = function func3(num1, num2) {
+  return num1 + num2;
+};
+console.log(func3(10, 20));
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
