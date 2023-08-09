@@ -220,13 +220,23 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 // console.log(message2);
 
 //// 配列
-var myProfile = ["narin", 25];
-var message3 = "\u540D\u524D\u306F".concat(myProfile[0], "\u3067\u3059\u3002\u5E74\u9F62\u306F").concat(myProfile[1], "\u3067\u3059\u3002");
-console.log(message3);
-var name = myProfile[0],
-  age = myProfile[1];
-var message4 = "\u540D\u524D\u306F".concat(name, "\u3067\u3059\u3002\u5E74\u9F62\u306F").concat(age, "\u3067\u3059\u3002");
-console.log(message4);
+// const myProfile = ["narin", 25];
+
+// const message3 = `名前は${myProfile[0]}です。年齢は${myProfile[1]}です。`;
+// console.log(message3);
+
+// const [name, age] = myProfile;
+// const message4 = `名前は${name}です。年齢は${age}です。`;
+// console.log(message4);
+
+/**
+ * デフォルト値、引き数など
+ */
+var sayHello = function sayHello() {
+  var name = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "ゲスト";
+  return console.log("\u3053\u3093\u306B\u3061\u306F!".concat(name, "\u3055\u3093!"));
+};
+sayHello();
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

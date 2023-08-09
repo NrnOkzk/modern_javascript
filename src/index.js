@@ -100,11 +100,17 @@
 // console.log(message2);
 
 //// 配列
-const myProfile = ["narin", 25];
+// const myProfile = ["narin", 25];
 
-const message3 = `名前は${myProfile[0]}です。年齢は${myProfile[1]}です。`;
-console.log(message3);
+// const message3 = `名前は${myProfile[0]}です。年齢は${myProfile[1]}です。`;
+// console.log(message3);
 
-const [name, age] = myProfile;
-const message4 = `名前は${name}です。年齢は${age}です。`;
-console.log(message4);
+// const [name, age] = myProfile;
+// const message4 = `名前は${name}です。年齢は${age}です。`;
+// console.log(message4);
+
+/**
+ * デフォルト値、引き数など
+ */
+const sayHello = (name = "ゲスト") => console.log(`こんにちは!${name}さん!`);
+sayHello();
