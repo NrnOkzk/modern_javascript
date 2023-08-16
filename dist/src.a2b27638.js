@@ -255,16 +255,48 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 // console.log(arr3);
 
 // 配列のコピー、結合
-var arr4 = [10, 20];
-var arr5 = [30, 40];
+// const arr4 = [10, 20];
+// const arr5 = [30, 40];
 
-// const arr6 = [...arr4];
-// console.log(arr6);
+// // const arr6 = [...arr4];
+// // console.log(arr6);
 
-// const arr7 = [...arr4, ...arr5];
-// console.log(arr7);
+// // const arr7 = [...arr4, ...arr5];
+// // console.log(arr7);
 
-var arr8 = arr4; // これは参照渡しになるので、どちらか変更するともう片方も影響を受ける
+// const arr8 = arr4; // これは参照渡しになるので、どちらか変更するともう片方も影響を受ける
+
+/**
+ * mapやfilterを使った配列の処理
+ */
+var nameArr = ["田中", "山田", "佐藤"];
+// for (let index = 0; index < nameArr.length; index++) {
+//   console.log(`${index + 1}番目は${nameArr[index]}です`);
+// }
+
+// const nameArr2 = nameArr.map((name) => {
+//   return name;
+// });
+// console.log(nameArr2);
+
+// nameArr.map((name, index) =>
+//   console.log(`${index + 1}番目は${nameArr[index]}です`)
+// );
+
+// const numArr = [1, 2, 3, 4, 5];
+// const newNumArr = numArr.filter((num) => {
+//   return num % 2 === 1;
+// });
+// console.log(newNumArr);
+
+var newNameArr = nameArr.map(function (name) {
+  if (name === "田中") {
+    return name;
+  } else {
+    return "".concat(name, "\u3055\u3093");
+  }
+});
+console.log(newNameArr);
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -290,7 +322,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38709" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43493" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
