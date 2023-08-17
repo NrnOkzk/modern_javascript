@@ -312,10 +312,33 @@ var nameArr = ["田中", "山田", "佐藤"];
 //   typeof num === "number" ? num.toLocaleString() : "数値を入力してください";
 // console.log(formattedNum);
 
-var checkSum = function checkSum(num1, num2) {
-  return num1 + num2 > 100 ? "100を超えています!!" : "許容範囲内です";
-};
-console.log(checkSum(50, 40));
+// const checkSum = (num1, num2) => {
+//   return num1 + num2 > 100 ? "100を超えています!!" : "許容範囲内です";
+// };
+// console.log(checkSum(50, 40));
+
+/**
+ * 論理演算子の本当の意味を知ろう
+ */
+// const flag1 = true;
+// const flag2 = false;
+
+// if(flag1 || flag2){
+//   console.log("1か2はtrueになります")
+// }
+// if(flag1 && flag2){
+//   console.log("1も2もtrueになります")
+// }
+
+// || は左側がfalseなら右側を返す 左側がtrueなら左側を返す
+// const num = null;
+// const fee = num || "金額未設定です";
+// console.log(fee);
+
+// && は左側がtrueなら右側を返す
+var num2 = null;
+var fee2 = num2 && "何か設定されました";
+console.log(fee2);
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
