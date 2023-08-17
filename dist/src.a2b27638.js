@@ -289,14 +289,33 @@ var nameArr = ["田中", "山田", "佐藤"];
 // });
 // console.log(newNumArr);
 
-var newNameArr = nameArr.map(function (name) {
-  if (name === "田中") {
-    return name;
-  } else {
-    return "".concat(name, "\u3055\u3093");
-  }
-});
-console.log(newNameArr);
+// const newNameArr = nameArr.map((name) => {
+//   if (name === "田中") {
+//     return name;
+//   } else {
+//     return `${name}さん`;
+//   }
+// });
+// console.log(newNameArr);
+
+/**
+ * 三項演算子
+ */
+// ある条件 ? 条件がtrueの時 : 条件がfalseの時
+// const val1 = 1 > 0 ? "trueです" : "falseです";
+// console.log(val1);
+
+// const num = 1300;
+// // console.log(num.toLocaleString());
+
+// const formattedNum =
+//   typeof num === "number" ? num.toLocaleString() : "数値を入力してください";
+// console.log(formattedNum);
+
+var checkSum = function checkSum(num1, num2) {
+  return num1 + num2 > 100 ? "100を超えています!!" : "許容範囲内です";
+};
+console.log(checkSum(50, 40));
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
